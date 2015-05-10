@@ -35,6 +35,9 @@ This is highly dependent on how much external buy-in we receive. All support sho
 
 * provide a method to delete an account & all data associated with it.
 * cold storage for older images. never delete without user request.
+* privacy concerns
+ * do we need to provide a way for users to opt out of anonymous metrics?
+ * what about providing complete case files on an abuser to law enforcement?
 
 ### Environment
 
