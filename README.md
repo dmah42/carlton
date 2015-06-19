@@ -3,6 +3,8 @@ Project Carlton
 
 Project Carlton allows users to track abuse they've received from any conceivable platform, creating individual and private 'case files' that can be easily viewed and downloaded. Additionally, this data would allow us to more easily track harassment patterns over different forms of online media.
 
+Having never suffered online harassment I can't imagine why having an individual case file would be useful, but the ability to track harassment patterns and do things like live analysis of dogpiling or creation rate of abusive accounts will be powerful. Being able to generate reports per-platform of abuse should also help raise visibility to the platform owners of the issues.
+
 ## Planning Doc
 
 ### Goals
@@ -15,8 +17,10 @@ Project Carlton allows users to track abuse they've received from any conceivabl
 * Track all harassment a single user has issued, and provide that data to law enforcement upon request.
 * Create anonymized abuse metrics based on this data.
 * Store all information required for law enforcement to create requests for data.
+  * US law enforcement or global law enforcement?
 * Provide documentation to law enforcement about user IP storage timelimits (when applicable) & how to request extensions from companies.
 * Create direct tie-ins to many platforms (Twitter, Tumblr, Facebook, Google+, YouTube) that remove the need for screenshots.
+  * would taking screenshots automatically work?
 
 ### Ingress Plugins
 
@@ -24,6 +28,7 @@ This is highly dependent on how much external buy-in we receive. All support sho
 
 * Chrome and Firefox plugins.
  * Look at storify for this. Their plugin even covers reddit.
+ * https://github.com/niklasvh/html2canvas might work, except for cross-origin requests.
 * Email ingress for forwarding abusive emails.
 * Image upload: JPG, PNG, TIFF, BMP
 * Facebook app
@@ -34,10 +39,13 @@ This is highly dependent on how much external buy-in we receive. All support sho
 ### Account Data
 
 * provide a method to delete an account & all data associated with it.
+  * including abuser accounts if there's some abuse of the system and people are flagged incorrectly
 * cold storage for older images. never delete without user request.
 * privacy concerns
- * do we need to provide a way for users to opt out of anonymous metrics?
- * what about providing complete case files on an abuser to law enforcement?
+  * do we need to provide a way for users to opt out of anonymous metrics?
+  * what about providing complete case files on an abuser to law enforcement?
+  * anonymizing data sets is a tricky thing, especially with sensitive data. i contributed to [some research](http://www.oii.ox.ac.uk/research/Ethical_Privacy_Guidelines_for_Mobile_Connectivity_Measurements.pdf) on privacy and open data sets which might be interesting. 
+  * specifically, it might be worth looking in to [Differential Privacy](https://en.wikipedia.org/wiki/Differential_privacy)
 
 ### Environment
 
